@@ -1,0 +1,24 @@
+   // Find GCD
+   function findGcd(n1, n2){
+        let num1 = n1;
+        let num2 = n2;
+        while(num1 % num2 > 0){
+
+            temp = num2;
+            num2 = num1 % num2;
+            num1 = temp;
+        }
+        return num2;
+    }
+    console.log("gcd = " + findGcd(3, 27));
+
+    //Find LCM
+function findLcm (x, y){
+    let originx = x;
+    let originy = y;
+    let product = x * y;
+    let gcd = findGcd(x, y);
+    lcm = product/gcd;
+    console.log("lcm of " + originx + " and " + originy + " = " + lcm);
+    }
+    findLcm(286, 314)
