@@ -1,0 +1,30 @@
+function pattern(n){
+    if (n == 0){
+        return;
+    }
+    else{
+        let i = 1
+        let x = n - 1;
+        var pattern = "";
+        while(i <= n){
+            let x = n - i;
+            let temp = "";
+            for(let j = 0; j<x; j++){
+                temp+=" ";
+            }
+            for(let j = 0; j<i; j++){
+                temp+="+";
+            }
+            if (i != n){
+                pattern += temp+"\n";
+            }
+            else{
+                pattern += temp;
+            }
+            i++;
+        }
+    }
+    console.log(pattern);
+}
+
+pattern(9);
